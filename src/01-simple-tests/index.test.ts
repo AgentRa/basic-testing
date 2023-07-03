@@ -1,32 +1,66 @@
-// Uncomment the code below and write your tests
-// import { simpleCalculator, Action } from './index';
+import { simpleCalculator, Action } from './index';
 
 describe('simpleCalculator tests', () => {
   test('should add two numbers', () => {
-    // Write your test here
+    // arrange
+    const value = { a: 2, b: 4, action: Action.Add };
+    // act
+    const result = simpleCalculator(value);
+    // assert
+    expect(result).toBe(6);
   });
 
   test('should subtract two numbers', () => {
-    // Write your test here
+    // arrange
+    const value = { a: 2, b: 4, action: Action.Subtract };
+    // act
+    const result = simpleCalculator(value);
+    // assert
+    expect(result).toBe(-2);
   });
 
   test('should multiply two numbers', () => {
-    // Write your test here
+    // arrange
+    const value = { a: 2, b: 4, action: Action.Multiply };
+    // act
+    const result = simpleCalculator(value);
+    // assert
+    expect(result).toBe(8);
   });
 
   test('should divide two numbers', () => {
-    // Write your test here
+    // arrange
+    const value = { a: 2, b: 4, action: Action.Divide };
+    // act
+    const result = simpleCalculator(value);
+    // assert
+    expect(result).toBe(0.5);
   });
 
   test('should exponentiate two numbers', () => {
-    // Write your test here
+    // arrange
+    const value = { a: 2, b: 4, action: Action.Exponentiate };
+    // act
+    const result = simpleCalculator(value);
+    // assert
+    expect(result).toBe(16);
   });
 
   test('should return null for invalid action', () => {
-    // Write your test here
+    // arrange
+    const value = { a: 2, b: 4, action: 'invalid' };
+    // act
+    const result = simpleCalculator(value);
+    // assert
+    expect(result).toBe(null);
   });
 
   test('should return null for invalid arguments', () => {
-    // Write your test here
+    // arrange
+    const value = { a: null, b: 'invalid', action: Action.Add };
+    // act
+    const result = simpleCalculator(value);
+    // assert
+    expect(result).toBe(null);
   });
 });
